@@ -1,3 +1,4 @@
+# Spotify Clone Website
 A clone of the popular music player Spotify with ReactJs , Context API and Spotify Web API. It uses Styled-components for styling.
 
 ## About
