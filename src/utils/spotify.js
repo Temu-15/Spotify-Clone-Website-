@@ -1,5 +1,5 @@
 const clientId = "2f9e3cd2c1f7476088ad528bdf162c8c";
-const redirectUri = "https://spotify-web-temu15.netlify.app/";
+const redirectUri = "http://localhost:3000/";
 const apiUrl = "https://accounts.spotify.com/authorize";
 const scopes = [
   "user-read-email",
@@ -18,6 +18,6 @@ const scopes = [
 
 const loginUrl = `${apiUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
   "%20"
-)}&response_type=token&show_dialog=true`;
+)}&response_type=token&show_dialog=false`;
 
 export default loginUrl;
