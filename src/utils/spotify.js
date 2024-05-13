@@ -1,6 +1,6 @@
 const clientId = "2f9e3cd2c1f7476088ad528bdf162c8c";
-const redirectUri = "https://spotify-clone-website-1vqrkwq9f-temu-15s-projects.vercel.app/";
-const apiUrl = "https://accounts.spotify.com/authorize";
+const redirectUri = "http://localhost:3000/";
+const apiUrl = "https://spotify-web-temu15.netlify.app/";
 const scopes = [
   "user-read-email",
   "user-read-private",
