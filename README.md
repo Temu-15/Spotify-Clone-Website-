@@ -12,8 +12,11 @@ This is a website project that includes all the functionalities and features wit
 * fast single page optional chaining
 
 ## Preview
+### Homepage view
 ![localhost_3000_ (3)](https://github.com/Temu-15/Spotify-Clone-Website-/assets/117737130/34ff5353-7d71-4ceb-84a2-e43432240b7a)
+### TrackList 
 ![localhost_3000_ (2)](https://github.com/Temu-15/Spotify-Clone-Website-/assets/117737130/e545cd85-634c-41ee-ae46-f2826b929415)
+### Bigger screen page
 ![Uploading localhost_3000_ (1).png…]()
 
 # Getting Started with 
