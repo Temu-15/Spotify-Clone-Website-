@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+A clone of the popular music player Spotify with ReactJs , Context API and Spotify Web API. It uses Styled-components for styling.
+
+## About
+This is a website project that includes all the functionalities and features within a basic spotify website. This is done as a project experience for react and api handling.
+
+## features
+* Authorization
+* Get user playlists
+* Get album tracks
+* Get user info
+* play a preview of the song
+* fast single page optional chaining
+
+## Preview
+![localhost_3000_ (3)](https://github.com/Temu-15/Spotify-Clone-Website-/assets/117737130/34ff5353-7d71-4ceb-84a2-e43432240b7a)
+![localhost_3000_ (2)](https://github.com/Temu-15/Spotify-Clone-Website-/assets/117737130/e545cd85-634c-41ee-ae46-f2826b929415)
+![Uploading localhost_3000_ (1).png…]()
+
+# Getting Started with 
+
+Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
