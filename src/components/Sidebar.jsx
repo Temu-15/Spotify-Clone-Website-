@@ -15,7 +15,7 @@ const Container = styled.div`
   flex-direction: column;
   overflow:hidden;
   .menu_icon{
-    display:none;s
+    display:none;
   }
   .top__links {
     width:100%;

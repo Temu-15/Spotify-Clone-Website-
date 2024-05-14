@@ -14,23 +14,8 @@ function PlaylistItem({playlist, className}) {
     type:"SET_SELECTED_PLAYLIST",
     selectedPlaylist:playlist,
   })
-
-
  }
-//  position:absolute;
-//   display:flex;
-//   justify-content:center;
-//   align-items:center;
-//   bottom:30%;
-//   right:1rem;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%;
-//   color: #fafafa;
-//   background-color: #1db954;
-//   box-shadow: 0 4px 16px -4px #121212;
-//   transition: 0.4s, transform 0.1s;
-//   opacity: 0;
+
   return (
     <Container className={className} onClick={ClickHandler}>
         <div className="playlist__image">

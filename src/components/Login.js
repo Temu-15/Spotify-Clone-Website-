@@ -18,7 +18,6 @@ export default function Login() {
   );
 }
 
-// the below code fragment can be found in:
 
 const Container = styled.div`
 display:flex;

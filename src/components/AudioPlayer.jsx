@@ -11,7 +11,6 @@ import ReactAudioPlayer from 'react-audio-player';
 const Container = styled.div`
 width: 100%;
 height: 100%;
-
 display:flex;
 justify-content:space-around;
 align-items:center;
@@ -38,6 +37,9 @@ align-items:center;
     }
 
 }
+ReactAudioPlayer{
+    font-size:3rem;
+}
 
 
 `
@@ -48,14 +50,14 @@ console.log(currentTrack);
   return (
     <Container>
         <div className="track__info">
-         <img src={currentTrack?.album.images[0].url} alt="album photo" />
+         <img src={currentTrack ? currentTrack.album.images[0].url : ''} alt="album photo" />
          <div className='track__info__title'>
             <h4>{currentTrack?.name}</h4>
             <p>{currentTrack?.artists[0]?.name}</p>
          </div>
         </div>
         <div className="player_icons">   
-            <ReactAudioPlayer src={currentTrack?.preview_url} autoPlay controls/>
+            <ReactAudioPlayer src={currentTrack?.preview_url} autoPlay controls black/>
         </div>
         <div>
             <input type="range" name="volume" id="volumeRange" />
