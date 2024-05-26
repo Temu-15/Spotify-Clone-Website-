@@ -1,6 +1,7 @@
 import React from "react";
 import { useStateProvider } from "../utils/StateProvider";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const Container = styled.div`
   height: 50%;
   width: 100%;
@@ -31,6 +32,8 @@ const Container = styled.div`
       display: flex;
       gap: 0.7rem;
       align-items: center;
+      text-decoration: none;
+      color: #b3b3b3;
       img {
         width: 42px;
         height: 42px;
@@ -62,10 +65,12 @@ function Playlists() {
       <h4>Playlists </h4>
       <ul>
         {playlists?.items.map((playlist) => (
-          <div className="playlist__item" onClick={() => clickNavigateHandler(playlist)}>
+          <Link to={`/playlist/playlistTracks?playlist_id=${playlist.id}`}
+          className="playlist__item"
+           onClick={() => clickNavigateHandler(playlist)}>
             <img src={playlist.images[0].url} alt="album__image" />
             <li key={playlist.id} >{playlist.name}</li>
-          </div>
+          </Link>
         ))}
       </ul>
     </Container>

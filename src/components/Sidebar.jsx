@@ -6,6 +6,7 @@ import Playlists from "./Playlists";
 import { useStateProvider } from "../utils/StateProvider";
 import { useState } from "react";
 import { CgMenu } from "react-icons/cg";
+import { Link } from "react-router-dom";
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -13,23 +14,28 @@ const Container = styled.div`
   color: #b3b3b3;
   display: flex;
   flex-direction: column;
-  overflow:hidden;
-  .menu_icon{
-    display:none;
+  overflow: hidden;
+
+  .menu_icon {
+    display: none;
   }
+
   .top__links {
-    width:100%;
-    height:50%;
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
+
     .logo {
       text-align: center;
       margin: 1rem 0;
+
       img {
         max-inline-size: 80%;
         block-size: auto;
       }
     }
+
     ul {
       list-style-type: none;
       display: flex;
@@ -37,12 +43,16 @@ const Container = styled.div`
       gap: 1rem;
       padding: 1rem;
       margin-left: 1rem;
-      li {
+
+      a {
         display: flex;
         gap: 1rem;
         align-items: center;
         cursor: pointer;
         transition: 0.2s ease-in-out;
+        text-decoration: none;
+        color: #b3b3b3;
+
         &:hover {
           color: white;
         }
@@ -50,19 +60,20 @@ const Container = styled.div`
     }
   }
 
+  @media (max-width: 768px) {
+    .top__links {
+      display: none;
+    }
 
-@media (max-width: 768px) {
-  &&.activated{
-    width:100vw;
-    height:100vh;
-  }
-  display:none;
-  .menu_icon{
-    display:block;
-  }
+    .menu_icon {
+      display: block;
+    }
 
- 
-}
+    &&.activated {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 `;
 function Sidebar() {
   const [{selectedPlaylist}, dispatch] = useStateProvider();
@@ -77,27 +88,33 @@ function Sidebar() {
     setIsActive(true)
   }
   return (
-    <Container classname={isActive?"activated":''}>
+    <Container className={isActive?"activated":''}>
       <CgMenu className="menu_icon" onClick={menuClickHandler}/>
       <div className="top__links">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img
             src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png"
             alt="spotify logo"
           />
-        </div>
+        </Link>
         <ul>
           <li onClick={homeClickHandler}>
-            <MdHomeFilled />
-            <span>Home</span>
+            <Link to="/">
+              <MdHomeFilled />
+              <span>Home</span>
+            </Link>
           </li>
           <li>
-            <MdSearch />
-            <span>Search</span>
+            <Link to="/search">
+              <MdSearch />
+              <span>Search</span>
+            </Link>
           </li>
           <li>
-            <IoLibrary />
-            <span>Library</span>
+            <Link to="/library">
+              <IoLibrary />
+              <span>Library</span>
+            </Link>
           </li>
         </ul>
       </div>

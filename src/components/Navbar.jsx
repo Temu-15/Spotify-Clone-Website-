@@ -1,17 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { useStateProvider } from "../utils/StateProvider";
 import {FaSearch} from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
 const [{user}, dispatch] = useStateProvider();
+const [searchKey, setSearchKey] = useState("");
+const navigate = useNavigate(); 
+const HandleSubmit = (e) => {
+  e.preventDefault();
+  navigate(`/search?query=${searchKey}`);
+}
 
   return  <Container>
-      <div className="searchbar">
+      <form className="searchbar"
+      onSubmit={HandleSubmit}>
         <FaSearch /> 
-        <input type="text" placeholder="Artists, songs or Podcasts"/>
-      </div>
+        <input type="text" 
+        placeholder="Artists, songs or Podcasts" 
+        onChange={(e) => setSearchKey(e.target.value)}
+        />
+      </form>
       <div className="avatar">
         <a href={user.uri} >
           <CgProfile />

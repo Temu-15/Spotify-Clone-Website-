@@ -52,7 +52,12 @@ const reducer = (state, action) => {
 
 
 
+      case "SET_SELECTED_ALBUM":
+        return {
+          ...state,
+          selectedAlbum:action.selectedAlbum
 
+        }
     case "SET_CATEGORIES":
       return {
        ...state,

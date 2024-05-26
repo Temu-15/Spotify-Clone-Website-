@@ -5,7 +5,11 @@ import { useEffect } from "react";
 import { useStateProvider } from "./utils/StateProvider";
 import SpotifyWebApi from "spotify-web-api-js";
 import Spotify from "./components/Spotify";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PlaylistTracksPage from "./pages/PlaylistTracksPage";
+import AlbumTracksPage from "./pages/AlbumTracksPage";
 
+import Search from "./pages/Search"
 const spotifyApi = new SpotifyWebApi();
 
 function App() {
@@ -73,7 +77,17 @@ function App() {
     fetchPlaylistTracks();
   }, [selectedPlaylist, dispatch]);
 
-  return <div className="App">{token ? <Spotify /> : <Login />}</div>;
+  return <BrowserRouter>
+  <Routes>
+    <Route path="/" element={ <div className="App">{token ? <Spotify /> : <Login />}</div>} />
+    <Route path="/search" element={token ? <Search /> : <Login />} />
+    <Route path='/playlist/playlistTracks' element={<PlaylistTracksPage />} />
+    <Route path='/album/albumTracks' element={<AlbumTracksPage />} />
+  </Routes>
+  </BrowserRouter> 
+  
+  
+ 
 }
 
 export default App;

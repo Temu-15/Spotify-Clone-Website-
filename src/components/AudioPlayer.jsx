@@ -44,13 +44,13 @@ ReactAudioPlayer{
 
 `
 function AudioPlayer() {
-const [{currentTrack}, dispatch]= useStateProvider();
-console.log(currentTrack);
+const [{currentTrack, selectedAlbum}, dispatch]= useStateProvider();
+console.log(selectedAlbum)
 
   return (
     <Container>
         <div className="track__info">
-         <img src={currentTrack ? currentTrack.album.images[0].url : ''} alt="album photo" />
+         <img src={currentTrack ? currentTrack?.album?.images[0].url : selectedAlbum?.images[0].url} alt="album photo" />
          <div className='track__info__title'>
             <h4>{currentTrack?.name}</h4>
             <p>{currentTrack?.artists[0]?.name}</p>

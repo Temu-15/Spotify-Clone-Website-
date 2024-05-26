@@ -10,8 +10,6 @@ const Container = styled.div`
   color:#fff;
 `;
 function Footer()
-
-
 {
   return <Container>
     <AudioPlayer />

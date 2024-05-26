@@ -1,0 +1,32 @@
+.search__container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 18vw 82vw;
+    background-color: black;
+    color: #fff;
+    overflow-y:auto;
+  }
+  
+.search__body {
+
+    height:100%;
+    padding: 0 0 0 10px;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  
+.search__title{
+    position:sticky;
+    width:100%;
+    z-index: 1;
+    height: 100px;
+}
+
+.search__title h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  
+  }
